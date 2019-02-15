@@ -23,7 +23,7 @@ def vairation(chromosome,pa):
     '''突变'''
     for i2 in range(len(chromosome)):
         j2=uniform(0,1)
-        if j2<=pa:
+        if j2>=pa:
             chromosome[i2]=1-chromosome[i2]
         else:
             pass
@@ -32,7 +32,7 @@ def vairation(chromosome,pa):
 def crossove(a,b,pc):
     '''两条染色体重组,采用一点交叉'''
     x2=uniform(0,1)
-    if x2<=pc:
+    if x2>=pc:
         x3=randint(0,5)
         a[x3:x3+2],b[x3:x3+2]=b[x3:x3+2],a[x3:x3+2]
     return a,b
